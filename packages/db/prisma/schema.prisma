@@ -1,0 +1,23 @@
+// SyncThink HRMS — Prisma schema
+// This is a placeholder. The full table definitions were already designed
+// as raw SQL (see docs/schema.sql in the project plan). Generate this file
+// properly with:
+//   1. Run docs/schema.sql against your dev Postgres database
+//   2. From packages/db, run: npx prisma db pull
+//   3. Review/clean up the generated models, then: npx prisma generate
+//
+// Alternatively, ask Claude to hand-write the full model set
+// (Tenant, User, Role, Permission, Employee, Department, AttendanceRecord,
+// LeaveRequest, PayrollRun, Payslip, AuditLog, Notification, etc.)
+// matching docs/schema.sql exactly.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Models go here once generated/hand-written.
